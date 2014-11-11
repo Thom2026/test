@@ -16,6 +16,7 @@ namespace ObjectAssignment
         public void MarkAsFinished()
         {
             Console.WriteLine("æsjdfghl");
+            Console.ReadKey();
             // finishedTimestamp = DateTime.Now;
         }
 
