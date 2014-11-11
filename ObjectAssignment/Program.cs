@@ -93,9 +93,15 @@ namespace ObjectAssignment
         {
             // Needs input from user to replace "" in the method
             Console.WriteLine("New \"To Do Item\":");
+            Console.WriteLine("Give a short desciption of ToDoItem:");
+            string sDesc = Console.ReadLine();
+            Console.WriteLine("Give a Long desciption of ToDoItem:");
+            string lDesc = Console.ReadLine();
+            Console.WriteLine("Give a desciption of first task:");
+            string fTDesc = Console.ReadLine();
 
             // Do some more here
-            _controller.AddNewToDoItem("", "", DateTime.Now, "");
+            _controller.AddNewToDoItem(sDesc, lDesc, DateTime.Now, fTDesc);
         }
     }
 }

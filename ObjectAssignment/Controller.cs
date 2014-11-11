@@ -5,7 +5,7 @@ namespace ObjectAssignment
 {
     public class Controller
     {
-        List<ToDoItem> _items;
+        List<ToDoItem> _items = new List<ToDoItem>();
 
         public Controller()
         {
@@ -14,6 +14,13 @@ namespace ObjectAssignment
 
         public void AddNewToDoItem(string shortDescription, string longDescription, DateTime itemDeadline, string firstTaskDescription)
         {
+            string sDescip = shortDescription;
+            string lDescip = longDescription;
+            DateTime iDeadline = itemDeadline;
+            string fTaskDescrip = firstTaskDescription;
+            ToDoItem TDI = new ToDoItem(sDescip, lDescip, iDeadline, fTaskDescrip);
+            TDI.AddTask(fTaskDescrip);
+            _items.Add(TDI);
             // A to do item contains 
             // a short description
             // a long description

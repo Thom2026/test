@@ -7,21 +7,30 @@ namespace ObjectAssignment
 {
     public class Task
     {
+        private DateTime finishedTimestamp {get; set;}
+        public string TaskDescription {get; set;}
         public Task(string description)
         {
             // A task has a description and a datetime that contains null when the task isn't finished or the date of when the task is finished 
+            TaskDescription = description;           
+            finishedTimestamp = DateTime.MinValue;
         }
 
 
         public void MarkAsFinished()
         {
-            // finishedTimestamp = DateTime.Now;
+            finishedTimestamp = DateTime.Now;
         }
 
         public bool ItemFinished()
         {
             // Do some more here
-            return false;
+            if (finishedTimestamp == DateTime.MinValue){
+                return false;
+            }
+            else {
+                return true;
+            }
         }
     }
 }
