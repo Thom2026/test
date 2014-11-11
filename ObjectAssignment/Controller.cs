@@ -15,6 +15,7 @@ namespace ObjectAssignment
         public void AddNewToDoItem(string shortDescription, string longDescription, DateTime itemDeadline, string firstTaskDescription)
         {
             Console.Write("aæghs");
+            Console.ReadKey();
             // A to do item contains 
             // a short description
             // a long description
