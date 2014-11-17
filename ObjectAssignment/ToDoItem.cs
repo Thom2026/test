@@ -12,11 +12,13 @@ namespace ObjectAssignment
         public string Description { get; set; }
         public DateTime ItemDeadl { get; set; }
 
+        public string Report = "";
         public ToDoItem(string shortDescription, string longDescription, DateTime itemDeadline, string firstTaskDescription)
         {
             Desc = shortDescription;
             Description = longDescription;
             ItemDeadl = itemDeadline;
+            //lsrjdfhglsfdhgkjdfhgfdsjkæ
         }
 
         public void AddTask(string TaskDescription)
@@ -34,8 +36,11 @@ namespace ObjectAssignment
                 {
                     done = true;
                 }
-                Task tnew = new Task(desc);
-                tasks.Add(tnew);
+                else
+                {
+                    Task tnew = new Task(desc);
+                    tasks.Add(tnew);
+                }
                 
                 
                 
@@ -44,8 +49,14 @@ namespace ObjectAssignment
 
         public bool ItemFinished()
         {
-            // Do some more here
-            return false;
+            foreach (Task task in tasks)
+            {
+                if (task.ItemFinished() == false)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public bool DeadlineExceeded()
@@ -56,7 +67,12 @@ namespace ObjectAssignment
 
         public string GetItemReport()
         {
-            return "ToDoItem.GetItemReport()";
+            Report = "";
+            foreach (Task task in tasks)
+            {
+                Report = Report + task.TaskDescription + ",";
+            }
+            return Report;
         }
     }
 }

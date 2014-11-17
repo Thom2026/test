@@ -34,9 +34,25 @@ namespace ObjectAssignment
         /// <param name="OnlyNotfinished">True = Items that aren't finished</param>
         /// <returns>The report in one string</returns>
         public string GetAllItemReports(bool OnlyNotfinished = false)
+        
         {
             // Do some more here
-            return "Controller.GetAllItemReports()";
+            string print = "";
+            foreach (ToDoItem todo in _items)
+            {
+                if (OnlyNotfinished == true)
+                {
+                    if (todo.ItemFinished() == false)
+                    {
+                        print = print + todo.Description + "\n" + todo.GetItemReport();
+                    }
+                }
+                else
+                {
+                    print = print + todo.Description + "\n" + todo.GetItemReport();
+                }
+            }
+            return print;
         }
     }
 }

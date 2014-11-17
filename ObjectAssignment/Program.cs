@@ -72,7 +72,7 @@ namespace ObjectAssignment
             Console.WriteLine("Print all not finished \"To Do Items\":");
 
             // Do some more here
-            _controller.GetAllItemReports(true);
+            Console.WriteLine(_controller.GetAllItemReports(true));
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace ObjectAssignment
             Console.WriteLine("Print all \"To Do Items\":");
 
             // Do some more heres
-            _controller.GetAllItemReports();
+            Console.WriteLine(_controller.GetAllItemReports());
         }
 
         /// <summary>
