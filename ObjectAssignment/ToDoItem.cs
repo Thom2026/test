@@ -21,7 +21,7 @@ namespace ObjectAssignment
             //lsrjdfhglsfdhgkjdfhgfdsjkæ
             //gggg
             //HejHej
-            //Her er Nicolaj
+           
         }
 
         public void AddTask(string TaskDescription)
