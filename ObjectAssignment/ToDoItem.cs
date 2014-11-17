@@ -20,7 +20,7 @@ namespace ObjectAssignment
             ItemDeadl = itemDeadline;
             //lsrjdfhglsfdhgkjdfhgfdsjkæ
             //gggg
-            //HejHejHej
+            //DavDav
         }
 
         public void AddTask(string TaskDescription)
